@@ -102,22 +102,22 @@ if __name__ == "__main__":
         #Below converts list to a string. If the below is not done an error is thrown
         #message = ",".join(row)
         message_ch1 = (var1, var2)
-        message_ch1_str = ",".join(message_ch1)
+        smoker_msg = ",".join(message_ch1)
 
         message_ch2 = (var1, var3)
-        message_ch2_str = ",".join(message_ch2)
+        foodA_msg = ",".join(message_ch2)
 
         message_ch3 = (var1, var4)
-        message_ch3_str = ",".join(message_ch3)
+        foodB_msg = ",".join(message_ch3)
 
         # send the time stamp and Smoker temp to the first queue
-        send_message("localhost","01-smoker",message_ch1_str)
+        send_message("localhost","01-smoker",smoker_msg)
 
         # send the time stamp and Food A temp to the Second queue
-        send_message("localhost","02-food-A",message_ch2_str)
+        send_message("localhost","02-food-A",foodA_msg)
 
         # send the time stamp and Food B temp to the Third queue
-        send_message("localhost","03-food-B",message_ch3_str)
+        send_message("localhost","03-food-B",foodB_msg)
         
         # Read records once in 30 seconds
         time.sleep(30)
