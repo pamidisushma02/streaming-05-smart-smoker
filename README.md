@@ -41,6 +41,7 @@ One process will Design and Implement a Barbeque producer that streams informati
 5. Create a connection and declare "01-smoker" queue. Publish time stamp and Smoker Temperature to this queue
 6. Create a connection and declare "02-food-A" queue. Publish time stamp and Food A Temperature to this queue
 7. Create a connection and declare "01-food-B" queue. Publish time stamp and Food B Temperature to this queue
+8. Use time.sleep(30) to read records once in 30 seconds
 
 
 ## Screenshot

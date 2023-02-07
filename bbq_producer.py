@@ -12,6 +12,8 @@ import sys
 import webbrowser
 # Import the below module whenever csv is involved 
 import csv
+# Import time module since we will use time.sleep() in this program
+import time
 
 
 
@@ -117,5 +119,6 @@ if __name__ == "__main__":
         # send the time stamp and Food B temp to the Third queue
         send_message("localhost","03-food-B",message_ch3_str)
         
-
+        # Read records once in 30 seconds
+        time.sleep(30)
     input_file.close()
