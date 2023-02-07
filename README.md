@@ -45,7 +45,9 @@ One process will Design and Implement a Barbeque producer that streams informati
 
 ## Screenshot
 
-  ### Below Screen shots are that of the console showing the messages published to three queues 
+  ### Below Screen shots are that of the console showing the messages published to three queues
+  ##### This screen shot shows that the Smoker Temp is published to the first queue, Food A temp is published to the second queue 
+  ##### and Food B temp is published to the third queue 
   
 
 ## Console
