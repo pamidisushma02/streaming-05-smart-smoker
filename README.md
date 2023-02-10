@@ -37,11 +37,12 @@ One process will Design and Implement a Barbeque producer that streams informati
 1. Read the csv data file
 2. Read each column into a seperate variable
 3. Use header = next(reader) to skip reading the header 
-4. Call the send_message function thrice i.e. one for each queue 
-5. Create a connection and declare "01-smoker" queue. Publish time stamp and Smoker Temperature to this queue
-6. Create a connection and declare "02-food-A" queue. Publish time stamp and Food A Temperature to this queue
-7. Create a connection and declare "01-food-B" queue. Publish time stamp and Food B Temperature to this queue
-8. Use time.sleep(30) to read records once in 30 seconds
+4. A main function has been defined
+5. Call the send_message function thrice i.e. one for each queue 
+6. Create a connection, first delete queue using queue_delete() and declare with queue_declare() function. "01-smoker" queue is declared. Publish time stamp and Smoker Temperature to this queue
+7. Create a connection, first delete queue using queue_delete() and declare with queue_declare() function.  "02-food-A" queue is declared. Publish time stamp and Food A Temperature to this queue
+8. Create a connection, first delete queue using queue_delete() and declare with queue_declare() function. "01-food-B" queue is declared. Publish time stamp and Food B Temperature to this queue
+9. Use time.sleep(30) to read records once in 30 seconds
 
 
 ## Screenshot
