@@ -53,9 +53,10 @@ def foodA_callback(ch, method, properties, body):
             print(f" [x] Oldest temp:  {foodA_oldest_temp}")
 
             if foodA_oldest_temp > 1 and foodA_oldest_temp - foodA_current_temp <= 1:
-                print(f">>> Food alert! The temperature of Food A has changed by 1 degree or less in 10 min. \n Old temp: {foodA_oldest_temp} to Current temp: {foodA_current_temp} Difference in temp: {foodA_temp_diff}")
+                print("Current Food A temp is:", foodA_current_temp,";", "Food A temp change in last 10 minutes is:", foodA_oldest_temp)
+                print(f">>> Food A alert! The temperature of Food A has changed by 1 degree or less in 10 min. Old temp")
             else:
-                print("Temp of foodA is all good")
+                print("Current Food A temp is:", foodA_current_temp,";", "Food A temp change in last 10 minutes is:", foodA_oldest_temp)
     else:
         print(f" [x] Current foodA temp is:", foodA_current_temp)
 

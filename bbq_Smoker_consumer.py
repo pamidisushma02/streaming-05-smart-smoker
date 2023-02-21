@@ -52,9 +52,10 @@ def smoker_callback(ch, method, properties, body):
             print(f" [x] Oldest temp:  {smoker_oldest_temp}")
 
             if smoker_oldest_temp > 1 and smoker_oldest_temp - smoker_current_temp >= 15:
-                print(f">>> Smoker alert! The temperature of the smoker has decreased more than 15 F in 2.5 min. \n Old temp: {smoker_oldest_temp} to Current temp: {smoker_current_temp} Difference in temp: {smoker_temp_diff}")
+                print("Current smoker temp is:", smoker_current_temp,";", "Smoker temp change in last 2.5 minutes is:", smoker_oldest_temp)
+                print(f">>> Smoker alert! The temperature of the smoker has decreased more than 15 F in 2.5 min")
             else:
-                print("Temp of Smoker is all good")
+                print("Current smoker temp is:", smoker_current_temp,";", "Smoker temp change in last 2.5 minutes is:", smoker_oldest_temp)
     else:
         print(f" [x] Current smoker temp is:", smoker_current_temp)
 
