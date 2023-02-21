@@ -1,10 +1,17 @@
 """
-    This program listens for work messages contiously. 
-    Start multiple versions to add more workers.  
-
-    Author: Sushma Pamidi
-    Date: February 11, 2023
-
+    This program listens for Smoker messages contiously.
+    
+    Name: Sushma Pamidi 
+    Date: 2/12/23
+    
+    We want know if (Condition To monitor):
+    The smoker temperature decreases by more than 15 degrees F in 2.5 minutes (smoker alert!)
+    
+    Smoker time window is 2.5 minutes
+    
+    Deque Max Length:
+    At one reading every 1/2 minute, the smoker deque max length is 5 (2.5 min * 1 reading/0.5 min)
+    
 """
 
 import pika

@@ -1,10 +1,20 @@
 """
-    This program listens for work messages contiously. 
-    Start multiple versions to add more workers.  
-
-    Author: Sushma Pamidi
-    Date: February 11, 2023
-
+    This program listens for Food A messages contiously.
+    
+    Name: Sushma Pamidi
+    Date: 2/12/23
+   
+    We want know if (Condition To monitor):
+    Food A temperature changes less than 1 degree F in 10 minutes (food stall!)
+    
+    Time Windows:
+    Food time window is 10 minutes
+    
+    Deque Max Length:
+    At one reading every 1/2 minute, the food deque max length is 20 (10 min * 1 reading/0.5 min) 
+    
+    Listening queue: 02-food-A
+    
 """
 
 import pika
